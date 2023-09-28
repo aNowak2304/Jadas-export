@@ -3,7 +3,6 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml"  />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://kit.fontawesome.com/e6301b77cd.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="src/sass/main.scss">
@@ -18,24 +17,24 @@
 
       <div class="nav__right">
         <a href="#aboutus" class="nav__item">Kontakt</a>
-
+        
         <div class="dropdown ">
-          <p class="nav__item">Oferta <img class="nav__item-icon" src="./src/img/nav-arrow.svg" alt=""></p>
-          <div class="dropdown-content">
+          <p class="nav__item">Oferta</p>
+          <!-- <div class="dropdown-content">
               <a href="#" class="nav__item">Opcja 1</a>
               <a href="#" class="nav__item">Opcja 2</a>
               <a href="#" class="nav__item">Opcja 3</a>
-          </div>
+          </div> -->
       </div>
 
-      <div class="dropdown ">
+      <!-- <div class="dropdown ">
         <p class="nav__item">PL <img class="nav__item-icon" src="./src/img/nav-arrow.svg" alt=""></p>
         <div class="dropdown-content">
-            <a href="#" class="nav__item">Opcja 1</a>
-            <a href="#" class="nav__item">Opcja 2</a>
-            <a href="#" class="nav__item">Opcja 3</a>
+            <a href="#" class="nav__item">Polski</a>
+            <a href="#" class="nav__item">Angielski</a>
+            <a href="#" class="nav__item">Ukraiński</a>
         </div>
-    </div>
+    </div> -->
 
       </div>
     </div>
@@ -96,8 +95,11 @@
       <p class="aboutus__text">Nasza firma zajmuje się importem z Norwegii na teren całej Europy głównie aut, aut elektrycznych ale
         również zajmujemy się importem maszyn budowlanych, maszyn rolniczych, łodzi.
         Również eksportujemy towary do Norwegii, więc jeśli masz ciekawy produkt to <a href="#contact">odezwij się do nas.</a></p>
+
      </div>
      <div class="circle-mid"></div>
+
+  
   </section>
 
   <section class="offer section-padding">
@@ -151,19 +153,26 @@
   <div class="wrapper">
     <h2 class="contact__heading">Masz pytanie? Bądźmy w kontakcie!</h2>
     <div class="contact__container">
-      <form class="contact__form" action="" data-netlify="true" method="POST">
+      <form class="contact__form" action=".src/php/main.php" method="post">
 
         <div class="contact__box">
-            <label for="email" class="contact__label">E-mail:</label>
-            <input type="email" class="contact__input" id="email" name="email" required>
-        </div>
+          <label for="email" class="contact__label">Adres E-mail:</label>
+          <input name="email" type="email" class="contact__input" id="email" required>
+          <p class="error-email">Wpisz poprawny Adres E-mail</p>
+      </div>
     
         <div class="contact__box">
             <label for="msg" class="contact__label">Zadaj nam pytanie:</label>
-            <textarea class="contact__textarea" name="msg" id="msg" required></textarea>
+            <textarea id="message" class="contact__textarea" name="msg" id="msg" required></textarea>
+            <p class="error-msg">Napisz wiadomość</p>
         </div>
     
-        <button type="submit" class="contact__btn">Wyślij</button>
+        <button type="submit" class="contact__btn btn-special-animation">Wyślij</button>
+
+        <div class="contact__popup">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quasi, molestiae quidem dolores recusandae magni cum nam voluptate excepturi praesentium?</p>
+          <button class="contact__btn btn-special-animation">Zamknij</button>
+        </div>
     </form>
   
     <div class="contact__info">
